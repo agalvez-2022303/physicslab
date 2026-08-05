@@ -164,9 +164,16 @@ export const SIMULATIONS_REGISTRY: SimulationEntry[] = [
   },
 ]
 
+/** Si es false, oculta las tarjetas "Próximamente" de la interfaz */
+export const SHOW_COMING_SOON = false
+
 /** Devuelve simulaciones agrupadas por categoría */
-export function getByCategory() {
-  return SIMULATIONS_REGISTRY.reduce(
+export function getByCategory(includeComingSoon = SHOW_COMING_SOON) {
+  const registry = includeComingSoon
+    ? SIMULATIONS_REGISTRY
+    : SIMULATIONS_REGISTRY.filter(s => s.estado === 'active')
+
+  return registry.reduce(
     (acc, sim) => {
       if (!acc[sim.categoriaId]) acc[sim.categoriaId] = []
       acc[sim.categoriaId].push(sim)

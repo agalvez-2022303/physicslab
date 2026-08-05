@@ -6,6 +6,7 @@ import {
   SIMULATIONS_REGISTRY,
   getByCategory,
   filterByText,
+  SHOW_COMING_SOON,
   type SimulationEntry,
 } from '../registry/simulations.registry'
 import styles from './HomePage.module.css'
@@ -28,12 +29,17 @@ export default function HomePage() {
   const [search, setSearch]   = useState('')
   const [filter, setFilter]   = useState<string>('todas')
 
+  const availableSims = useMemo(
+    () => (SHOW_COMING_SOON ? SIMULATIONS_REGISTRY : SIMULATIONS_REGISTRY.filter(s => s.estado === 'active')),
+    []
+  )
+
   const filtered: SimulationEntry[] = useMemo(() => {
-    let sims = [...SIMULATIONS_REGISTRY]
+    let sims = [...availableSims]
     if (filter !== 'todas') sims = sims.filter(s => s.categoriaId === filter)
     if (search.trim()) sims = filterByText(sims, search)
     return sims
-  }, [search, filter])
+  }, [search, filter, availableSims])
 
   const byCategory = useMemo(() => getByCategory(), [])
   const showSearch = search.trim() || filter !== 'todas'
@@ -46,28 +52,28 @@ export default function HomePage() {
       <section className={styles.hero}>
         <HeroCanvas />
         <div className={styles.heroContent}>
-          <div className={styles.heroLabel}>Plataforma de Simulaciones</div>
+          <div className={styles.heroLabel}>Laboratorio de Física</div>
           <h1 className={styles.heroTitle}>
-            Física <span className={styles.heroAccent}>interactiva</span>
+            Simulaciones <span className={styles.heroAccent}>Interactivas</span>
           </h1>
           <p className={styles.heroSubtitle}>
-            Experimenta con más de 125 simulaciones. Ajusta parámetros en tiempo real
-            y visualiza los fenómenos físicos.
+            Ajusta parámetros en tiempo real, visualiza vectores y analiza fenómenos
+            físicos con gráficas sincronizadas.
           </p>
           <div className={styles.heroStats}>
             <div className={styles.stat}>
-              <span className={styles.statNum}>125</span>
+              <span className={styles.statNum}>3</span>
               <span className={styles.statLabel}>Simulaciones</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.stat}>
-              <span className={styles.statNum}>9</span>
-              <span className={styles.statLabel}>Categorías</span>
+              <span className={styles.statNum}>100%</span>
+              <span className={styles.statLabel}>Interactivo</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.stat}>
-              <span className={styles.statNum}>3</span>
-              <span className={styles.statLabel}>Disponibles</span>
+              <span className={styles.statNum}>SI</span>
+              <span className={styles.statLabel}>Unidades</span>
             </div>
           </div>
         </div>
@@ -99,7 +105,7 @@ export default function HomePage() {
               Todas
             </button>
             {CATEGORIES.filter(cat =>
-              SIMULATIONS_REGISTRY.some(s => s.categoriaId === cat)
+              availableSims.some(s => s.categoriaId === cat)
             ).map(cat => (
               <button
                 key={cat}
@@ -121,7 +127,7 @@ export default function HomePage() {
             <div className={styles.categoryHeader}>
               <h2 className={styles.categoryTitle}>
                 {filtered.length > 0
-                  ? `${filtered.length} resultado${filtered.length !== 1 ? 's' : ''}`
+                  ? `${filtered.length} simulación${filtered.length !== 1 ? 'es' : ''}`
                   : 'Sin resultados'}
               </h2>
             </div>
@@ -144,9 +150,6 @@ export default function HomePage() {
             <section key={catId} className={styles.category}>
               <div className={styles.categoryHeader}>
                 <h2 className={styles.categoryTitle}>{CATEGORY_NAMES[catId]}</h2>
-                <span className={styles.categoryCount}>
-                  {sims.filter(s => s.estado === 'active').length} activa{sims.filter(s => s.estado === 'active').length !== 1 ? 's' : ''}
-                </span>
               </div>
               <div className={styles.grid}>
                 {sims.map((sim, i) => (
@@ -163,7 +166,7 @@ export default function HomePage() {
         <div className={styles.footerInner}>
           <span className={styles.footerLogo}>Φ PhysicsLab</span>
           <span className={styles.footerText}>
-            Fase 1 · 3 de 125 simulaciones
+            Simulaciones Interactivas de Física
           </span>
         </div>
       </footer>
