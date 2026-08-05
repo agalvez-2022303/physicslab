@@ -1,0 +1,38 @@
+{
+  "slug": "tres-fuerzas-equilibrio",
+  "titulo": "Tres Fuerzas en Equilibrio",
+  "teoria": "Para que un objeto esté en equilibrio estático, la suma vectorial de todas las fuerzas que actúan sobre él debe ser cero (Primera Condición de Equilibrio). Cuando tres fuerzas concurrentes actúan sobre un nudo, se cumple:\n\n**F₁ + F₂ + F₃ = 0**\n\nEsto implica que las componentes horizontales y verticales suman cero por separado. Geométricamente, los tres vectores forman un triángulo cerrado. La condición de existencia exige que cada fuerza sea menor que la suma de las otras dos.",
+  "formulas": [
+    {
+      "expresion": "ΣFₓ = 0",
+      "descripcion": "Equilibrio en el eje X",
+      "variables": [
+        { "simbolo": "Fₓ", "descripcion": "Componente horizontal de cada fuerza", "unidad": "N" }
+      ]
+    },
+    {
+      "expresion": "ΣFᵧ = 0",
+      "descripcion": "Equilibrio en el eje Y",
+      "variables": [
+        { "simbolo": "Fᵧ", "descripcion": "Componente vertical de cada fuerza", "unidad": "N" }
+      ]
+    },
+    {
+      "expresion": "F₁ < F₂ + F₃",
+      "descripcion": "Condición de existencia del equilibrio",
+      "variables": [
+        { "simbolo": "F₁, F₂, F₃", "descripcion": "Magnitudes de las tres fuerzas", "unidad": "N" }
+      ]
+    }
+  ],
+  "unidades": [
+    { "magnitud": "Fuerza", "unidad": "Newton", "simbolo": "N" },
+    { "magnitud": "Ángulo", "unidad": "Grado sexagesimal", "simbolo": "°" }
+  ],
+  "glosario": [
+    { "termino": "Equilibrio estático", "definicion": "Estado de un cuerpo cuya suma vectorial de fuerzas y de momentos es cero." },
+    { "termino": "Fuerza concurrente", "definicion": "Fuerza cuya línea de acción pasa por un punto común." },
+    { "termino": "Polea", "definicion": "Máquina simple que cambia la dirección de la fuerza sin variar su magnitud." },
+    { "termino": "Tensión", "definicion": "Fuerza transmitida a través de una cuerda o cable." }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "slug": "movimiento-aceleracion-constante",
+  "titulo": "Movimiento con Aceleración Constante",
+  "teoria": "El movimiento rectilíneo uniformemente acelerado (MRUA) es aquel en que la aceleración es constante y el objeto se mueve en línea recta. Las ecuaciones cinemáticas que lo describen son:\n\n- **Posición:** x(t) = x₀ + v₀·t + ½·a·t²\n- **Velocidad:** v(t) = v₀ + a·t\n- **Relación v-x:** v² = v₀² + 2·a·(x - x₀)\n\nCuando a = 0, el movimiento es rectilíneo uniforme (MRU). Cuando a > 0, el objeto acelera; cuando a < 0, desacelera.",
+  "formulas": [
+    {
+      "expresion": "x(t) = x₀ + v₀·t + ½·a·t²",
+      "descripcion": "Posición en función del tiempo",
+      "variables": [
+        { "simbolo": "x", "descripcion": "Posición", "unidad": "m" },
+        { "simbolo": "x₀", "descripcion": "Posición inicial", "unidad": "m" },
+        { "simbolo": "v₀", "descripcion": "Velocidad inicial", "unidad": "m/s" },
+        { "simbolo": "a", "descripcion": "Aceleración", "unidad": "m/s²" },
+        { "simbolo": "t", "descripcion": "Tiempo", "unidad": "s" }
+      ]
+    },
+    {
+      "expresion": "v(t) = v₀ + a·t",
+      "descripcion": "Velocidad en función del tiempo",
+      "variables": [
+        { "simbolo": "v", "descripcion": "Velocidad", "unidad": "m/s" },
+        { "simbolo": "v₀", "descripcion": "Velocidad inicial", "unidad": "m/s" },
+        { "simbolo": "a", "descripcion": "Aceleración", "unidad": "m/s²" },
+        { "simbolo": "t", "descripcion": "Tiempo", "unidad": "s" }
+      ]
+    }
+  ],
+  "unidades": [
+    { "magnitud": "Posición", "unidad": "Metro", "simbolo": "m" },
+    { "magnitud": "Velocidad", "unidad": "Metro por segundo", "simbolo": "m/s" },
+    { "magnitud": "Aceleración", "unidad": "Metro por segundo al cuadrado", "simbolo": "m/s²" },
+    { "magnitud": "Tiempo", "unidad": "Segundo", "simbolo": "s" }
+  ],
+  "glosario": [
+    { "termino": "Posición", "definicion": "Ubicación del objeto en el eje de referencia, medida desde el origen." },
+    { "termino": "Velocidad", "definicion": "Rapidez de cambio de la posición respecto al tiempo." },
+    { "termino": "Aceleración", "definicion": "Rapidez de cambio de la velocidad respecto al tiempo." },
+    { "termino": "MRUA", "definicion": "Movimiento Rectilíneo Uniformemente Acelerado. La aceleración es constante." },
+    { "termino": "MRU", "definicion": "Movimiento Rectilíneo Uniforme. La velocidad es constante (a = 0)." }
+  ]
+}

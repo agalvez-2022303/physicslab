@@ -1,0 +1,122 @@
+[
+  {
+    "id": "sim-001",
+    "slug": "movimiento-aceleracion-constante",
+    "titulo": "Movimiento con Aceleración Constante",
+    "descripcionCorta": "Estudia el movimiento rectilíneo uniformemente acelerado con posición, velocidad y aceleración editables.",
+    "categoriaId": "mecanica",
+    "dificultad": "basico",
+    "estado": "active",
+    "orden": 1,
+    "icono": "→",
+    "etiquetas": ["cinemática", "MRUA", "gráficas", "posición", "velocidad"]
+  },
+  {
+    "id": "sim-002",
+    "slug": "tres-fuerzas-equilibrio",
+    "titulo": "Tres Fuerzas en Equilibrio",
+    "descripcionCorta": "Explora el equilibrio estático de tres fuerzas concurrentes con poleas y pesas arrastrables.",
+    "categoriaId": "mecanica",
+    "dificultad": "basico",
+    "estado": "active",
+    "orden": 2,
+    "icono": "△",
+    "etiquetas": ["estática", "equilibrio", "vectores", "fuerzas", "poleas"]
+  },
+  {
+    "id": "sim-003",
+    "slug": "composicion-fuerzas",
+    "titulo": "Composición de Fuerzas",
+    "descripcionCorta": "Suma vectores de fuerza gráficamente y calcula la resultante con paralelogramo o método punta-cola.",
+    "categoriaId": "mecanica",
+    "dificultad": "basico",
+    "estado": "active",
+    "orden": 3,
+    "icono": "⊕",
+    "etiquetas": ["vectores", "suma vectorial", "resultante", "componentes"]
+  },
+  {
+    "id": "sim-004",
+    "slug": "pendulo-simple",
+    "titulo": "Péndulo Simple",
+    "descripcionCorta": "Analiza el movimiento oscilatorio de un péndulo y su periodo en función de la longitud.",
+    "categoriaId": "mecanica",
+    "dificultad": "basico",
+    "estado": "coming-soon",
+    "orden": 4,
+    "icono": "◷",
+    "etiquetas": ["péndulo", "oscilación", "periodo"]
+  },
+  {
+    "id": "sim-005",
+    "slug": "tiro-parabolico",
+    "titulo": "Tiro Parabólico",
+    "descripcionCorta": "Visualiza la trayectoria de un proyectil bajo la acción de la gravedad.",
+    "categoriaId": "mecanica",
+    "dificultad": "basico",
+    "estado": "coming-soon",
+    "orden": 5,
+    "icono": "⌒",
+    "etiquetas": ["proyectil", "parábola", "gravedad"]
+  },
+  {
+    "id": "sim-006",
+    "slug": "ley-de-hooke",
+    "titulo": "Ley de Hooke",
+    "descripcionCorta": "Observa la deformación de un resorte y la relación entre fuerza y elongación.",
+    "categoriaId": "mecanica",
+    "dificultad": "basico",
+    "estado": "coming-soon",
+    "orden": 6,
+    "icono": "⌀",
+    "etiquetas": ["resorte", "elasticidad", "Hooke"]
+  },
+  {
+    "id": "sim-007",
+    "slug": "onda-transversal",
+    "titulo": "Onda Transversal",
+    "descripcionCorta": "Visualiza la propagación de una onda transversal y sus parámetros.",
+    "categoriaId": "oscilaciones-ondas",
+    "dificultad": "intermedio",
+    "estado": "coming-soon",
+    "orden": 1,
+    "icono": "≋",
+    "etiquetas": ["onda", "amplitud", "frecuencia", "longitud de onda"]
+  },
+  {
+    "id": "sim-008",
+    "slug": "campo-electrico",
+    "titulo": "Campo Eléctrico",
+    "descripcionCorta": "Visualiza el campo eléctrico generado por cargas puntuales.",
+    "categoriaId": "electrodinamica",
+    "dificultad": "intermedio",
+    "estado": "coming-soon",
+    "orden": 1,
+    "icono": "⚡",
+    "etiquetas": ["campo eléctrico", "cargas", "Coulomb"]
+  },
+  {
+    "id": "sim-009",
+    "slug": "espejo-convergente",
+    "titulo": "Espejo Convergente",
+    "descripcionCorta": "Traza rayos de luz y forma imágenes en espejos esféricos convergentes.",
+    "categoriaId": "optica",
+    "dificultad": "intermedio",
+    "estado": "coming-soon",
+    "orden": 1,
+    "icono": "◑",
+    "etiquetas": ["espejos", "óptica geométrica", "rayos"]
+  },
+  {
+    "id": "sim-010",
+    "slug": "ciclo-carnot",
+    "titulo": "Ciclo de Carnot",
+    "descripcionCorta": "Visualiza el ciclo termodinámico ideal de Carnot en un diagrama P-V.",
+    "categoriaId": "termodinamica",
+    "dificultad": "avanzado",
+    "estado": "coming-soon",
+    "orden": 1,
+    "icono": "♨",
+    "etiquetas": ["Carnot", "termodinámica", "eficiencia"]
+  }
+]

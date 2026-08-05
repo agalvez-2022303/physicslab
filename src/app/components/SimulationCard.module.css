@@ -1,0 +1,147 @@
+.link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  padding: var(--sp-5);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition:
+    transform var(--transition-spring),
+    border-color var(--transition-base),
+    background var(--transition-base),
+    box-shadow var(--transition-base);
+  animation: fadeInUp 0.4s ease both;
+  height: 100%;
+}
+
+.active:hover {
+  transform: translateY(-3px) scale(1.01);
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: var(--glow-sm);
+  cursor: pointer;
+}
+
+.active:hover .activeIndicator {
+  opacity: 1;
+}
+
+.active:hover .icon {
+  transform: scale(1.15);
+}
+
+.comingSoon {
+  opacity: 0.45;
+  cursor: default;
+}
+
+/* Glow decorativo en la esquina superior derecha */
+.active::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.04) 0%, transparent 60%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.active:hover::before { opacity: 1; }
+
+/* ─── Icono ─────────────────────────────────────────────────── */
+.iconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  font-size: var(--text-xl);
+  display: block;
+  transition: transform var(--transition-spring);
+}
+
+/* ─── Cuerpo ─────────────────────────────────────────────────── */
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  flex: 1;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.comingTag {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--gray-500);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.desc {
+  font-size: var(--text-sm);
+  color: var(--gray-400);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ─── Tags ──────────────────────────────────────────────────── */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-1);
+  margin-top: auto;
+  padding-top: var(--sp-2);
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--gray-500);
+  padding: 2px var(--sp-2);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-full);
+  letter-spacing: 0.03em;
+}
+
+/* ─── Indicador activo ──────────────────────────────────────── */
+.activeIndicator {
+  position: absolute;
+  top: var(--sp-4);
+  right: var(--sp-4);
+  width: 6px;
+  height: 6px;
+  background: var(--white);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  box-shadow: 0 0 6px rgba(255,255,255,0.6);
+}

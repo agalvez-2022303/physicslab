@@ -1,0 +1,65 @@
+[
+  {
+    "id": "mecanica",
+    "nombre": "Mecánica",
+    "descripcion": "Movimiento, fuerzas y energía",
+    "icono": "⚙️",
+    "orden": 1
+  },
+  {
+    "id": "oscilaciones-ondas",
+    "nombre": "Oscilaciones y Ondas",
+    "descripcion": "Movimiento periódico y propagación",
+    "icono": "〜",
+    "orden": 2
+  },
+  {
+    "id": "electrodinamica",
+    "nombre": "Electrodinámica",
+    "descripcion": "Campos eléctricos y magnéticos",
+    "icono": "⚡",
+    "orden": 3
+  },
+  {
+    "id": "optica",
+    "nombre": "Óptica",
+    "descripcion": "Luz, lentes y espejos",
+    "icono": "◎",
+    "orden": 4
+  },
+  {
+    "id": "termodinamica",
+    "nombre": "Termodinámica",
+    "descripcion": "Calor, temperatura y entropía",
+    "icono": "♨",
+    "orden": 5
+  },
+  {
+    "id": "relatividad",
+    "nombre": "Teoría de la Relatividad",
+    "descripcion": "Espacio, tiempo y gravedad",
+    "icono": "∞",
+    "orden": 6
+  },
+  {
+    "id": "fisica-atomica",
+    "nombre": "Física Atómica",
+    "descripcion": "Átomos, electrones y espectros",
+    "icono": "◉",
+    "orden": 7
+  },
+  {
+    "id": "fisica-nuclear",
+    "nombre": "Física Nuclear",
+    "descripcion": "Núcleos, radiactividad y fisión",
+    "icono": "☢",
+    "orden": 8
+  },
+  {
+    "id": "estado-solido",
+    "nombre": "Estado Sólido",
+    "descripcion": "Cristales, bandas y semiconductores",
+    "icono": "⬡",
+    "orden": 9
+  }
+]

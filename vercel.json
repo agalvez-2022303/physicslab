@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build --workspace=src",
+  "outputDirectory": "src/dist",
+  "rewrites": [
+    { "source": "/api/categories", "destination": "/api/categories.ts" },
+    { "source": "/api/simulations", "destination": "/api/simulations/index.ts" },
+    { "source": "/api/simulations/:slug", "destination": "/api/simulations/[slug].ts" },
+    { "source": "/api/content/:slug", "destination": "/api/content/[slug].ts" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
