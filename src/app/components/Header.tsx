@@ -9,8 +9,8 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.inner}>
         <Link to="/" className={styles.logo}>
-          <span className={styles.logoMark}>Φ</span>
-          <span className={styles.logoText}>PhysicsLab</span>
+          <span className={styles.logoMark}>K</span>
+          <span className={styles.logoText}>Kinal Simulator</span>
         </Link>
 
         {!isHome && (

@@ -164,7 +164,7 @@ export default function HomePage() {
       {/* ─── Footer ──────────────────────────────────────────────── */}
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
-          <span className={styles.footerLogo}>Φ PhysicsLab</span>
+          <span className={styles.footerLogo}>Kinal Simulator</span>
           <span className={styles.footerText}>
             Simulaciones Interactivas de Física
           </span>

@@ -1,4 +1,4 @@
-# PhysicsLab — Plataforma de Simulaciones de Física Interactivas (Fase 1)
+# Kinal Simulator — Plataforma de Simulaciones de Física Interactivas
 
 Inspirada funcionalmente en Walter Fendt (walter-fendt.de/html5/phes/), con una interfaz futurista de alto impacto visual (exclusivamente en paleta **Blanco y Negro**), arquitectura modular preparada para escalar a ~125 simulaciones, y Serverless APIs desplegables en Vercel.
 
