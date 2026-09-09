@@ -62,9 +62,19 @@ export default function App() {
         }
       />
       <Route
+        path="/sim/suma-vectores"
+        element={
+          <SimulationShell slug="suma-vectores">
+            <Suspense fallback={<SimulationLoader />}>
+              <ForceComposition />
+            </Suspense>
+          </SimulationShell>
+        }
+      />
+      <Route
         path="/sim/composicion-fuerzas"
         element={
-          <SimulationShell slug="composicion-fuerzas">
+          <SimulationShell slug="suma-vectores">
             <Suspense fallback={<SimulationLoader />}>
               <ForceComposition />
             </Suspense>

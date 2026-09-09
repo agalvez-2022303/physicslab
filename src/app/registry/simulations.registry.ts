@@ -72,16 +72,16 @@ export const SIMULATIONS_REGISTRY: SimulationEntry[] = [
   },
   {
     id: 'sim-003',
-    slug: 'composicion-fuerzas',
-    titulo: 'Composición de Fuerzas',
-    descripcionCorta: 'Suma vectorial con paralelogramo o punta-cola.',
+    slug: 'suma-vectores',
+    titulo: 'Suma de vectores',
+    descripcionCorta: 'Método del paralelogramo, triángulo, polígono y método analítico.',
     categoriaId: 'mecanica',
     dificultad: 'basico',
     estado: 'active',
     orden: 3,
     icono: '⊕',
-    etiquetas: ['vectores', 'resultante'],
-    path: '/sim/composicion-fuerzas',
+    etiquetas: ['vectores', 'suma vectorial', 'resultante', 'analítico'],
+    path: '/sim/suma-vectores',
   },
   // ─── Próximamente ──────────────────────────────────────────────
   {

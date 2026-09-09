@@ -1,0 +1,44 @@
+{
+  "slug": "suma-vectores",
+  "titulo": "Suma de vectores",
+  "teoria": "La suma vectorial determina el vector resultante $\\vec{R} = \\sum \\vec{V}_i$ equivalente a la acción combinada de múltiples vectores.\n\n### Métodos Gráficos:\n1. **Para 2 vectores:**\n   - **Método del Paralelogramo:** Los dos vectores se dibujan con origen común. Se trazan rectas paralelas a cada vector pasando por el extremo del otro. La diagonal desde el origen común hasta el vértice opuesto es el vector resultante $\\vec{R}$.\n   - **Método del Triángulo:** Se dibuja el primer vector $\\vec{V}_1$ desde el origen y se traslada el segundo $\\vec{V}_2$ de manera que su origen coincida con el extremo de $\\vec{V}_1$ (cabeza con cola). El vector que cierra el triángulo desde el origen hasta el extremo de $\\vec{V}_2$ es $\\vec{R}$.\n\n2. **Para 3 o más vectores:**\n   - **Método del Polígono:** Se encadenan todos los vectores consecutivamente de forma cabeza con cola (el origen de cada vector en el extremo del anterior). El vector resultante $\\vec{R}$ va desde el origen del primer vector hasta el extremo del último, cerrando el polígono.\n\n### Método Analítico (Descomposición en Componentes):\n1. Cada vector se descompone en sus componentes rectangulares:\n   $$V_{ix} = |V_i| \\cdot \\cos(\\theta_i), \\quad V_{iy} = |V_i| \\cdot \\sin(\\theta_i)$$\n2. Se suman algebraicamente las componentes de cada eje:\n   $$R_x = \\sum V_{ix}, \\quad R_y = \\sum V_{iy}$$\n3. Se calcula el módulo y la dirección angular del vector resultante:\n   $$|R| = \\sqrt{R_x^2 + R_y^2}, \\quad \\theta = \\arctan\\left(\\frac{|R_y|}{|R_x|}\\right) \\quad (\\text{ajustado al cuadrante})$$",
+  "formulas": [
+    {
+      "expresion": "V_x = |V| \\cdot \\cos(\\theta), \\quad V_y = |V| \\cdot \\sin(\\theta)",
+      "descripcion": "Descomposición ortogonal de cada vector individual",
+      "variables": [
+        { "simbolo": "V_x", "descripcion": "Componente horizontal", "unidad": "u" },
+        { "simbolo": "V_y", "descripcion": "Componente vertical", "unidad": "u" },
+        { "simbolo": "|V|", "descripcion": "Módulo del vector", "unidad": "u" },
+        { "simbolo": "θ", "descripcion": "Ángulo polar respecto al eje +X", "unidad": "°" }
+      ]
+    },
+    {
+      "expresion": "R_x = \\sum_{i=1}^n V_{ix}, \\quad R_y = \\sum_{i=1}^n V_{iy}",
+      "descripcion": "Sumatoria de componentes cartesianas en la tabla analítica",
+      "variables": [
+        { "simbolo": "R_x", "descripcion": "Componente X de la resultante", "unidad": "u" },
+        { "simbolo": "R_y", "descripcion": "Componente Y de la resultante", "unidad": "u" }
+      ]
+    },
+    {
+      "expresion": "|R| = \\sqrt{R_x^2 + R_y^2}, \\quad \\theta_R = \\arctan(R_y / R_x)",
+      "descripcion": "Módulo y ángulo de la resultante analítica",
+      "variables": [
+        { "simbolo": "|R|", "descripcion": "Módulo de la resultante", "unidad": "u" },
+        { "simbolo": "θ_R", "descripcion": "Ángulo de la resultante", "unidad": "°" }
+      ]
+    }
+  ],
+  "unidades": [
+    { "magnitud": "Magnitud Vectorial", "unidad": "Unidades arbitrarias / Newton / Metro", "simbolo": "u / N / m" },
+    { "magnitud": "Ángulo de Inclinación", "unidad": "Grado sexagesimal", "simbolo": "°" }
+  ],
+  "glosario": [
+    { "termino": "Suma Vectorial", "definicion": "Operación matemática que combina dos o más vectores para hallar un único vector equivalente (resultante)." },
+    { "termino": "Método del Paralelogramo", "definicion": "Método geométrico para sumar dos vectores concurrentes usando un paralelogramo donde la diagonal es la resultante." },
+    { "termino": "Método del Triángulo", "definicion": "Método gráfico punta-cola para dos vectores que forman un triángulo cerrado con la resultante." },
+    { "termino": "Método del Polígono", "definicion": "Extensión del método punta-cola para sumar 3 o más vectores encadenados consecutivamente." },
+    { "termino": "Método Analítico", "definicion": "Procedimiento algebraico exacto basado en descomponer vectores en una tabla cartesiana y sumar sus componentes." }
+  ]
+}

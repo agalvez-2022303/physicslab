@@ -37,15 +37,15 @@
   },
   {
     "id": "sim-003",
-    "slug": "composicion-fuerzas",
-    "titulo": "Composición de Fuerzas",
-    "descripcionCorta": "Suma vectores de fuerza gráficamente y calcula la resultante con paralelogramo o método punta-cola.",
+    "slug": "suma-vectores",
+    "titulo": "Suma de vectores",
+    "descripcionCorta": "Suma vectores mediante método del paralelogramo, triángulo, polígono y método analítico con tabla de componentes.",
     "categoriaId": "mecanica",
     "dificultad": "basico",
     "estado": "active",
     "orden": 3,
     "icono": "⊕",
-    "etiquetas": ["vectores", "suma vectorial", "resultante", "componentes"]
+    "etiquetas": ["vectores", "suma vectorial", "resultante", "paralelogramo", "triángulo", "polígono", "analítico"]
   },
   {
     "id": "sim-004",
