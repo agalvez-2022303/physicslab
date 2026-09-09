@@ -72,9 +72,9 @@ export default function App() {
         }
       />
       <Route
-        path="/sim/representacion-vectores"
+        path="/sim/vectores"
         element={
-          <SimulationShell slug="representacion-vectores">
+          <SimulationShell slug="vectores">
             <Suspense fallback={<SimulationLoader />}>
               <VectorRepresentation />
             </Suspense>

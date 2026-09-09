@@ -1,9 +1,9 @@
 [
   {
     "id": "sim-000",
-    "slug": "representacion-vectores",
-    "titulo": "Representación y Conversión de Vectores",
-    "descripcionCorta": "Representa vectores y convierte entre coordenadas rectangulares, polares y geográficas con práctica interactiva.",
+    "slug": "vectores",
+    "titulo": "Vectores",
+    "descripcionCorta": "Representación y conversión entre coordenadas rectangulares, polares y geográficas con práctica interactiva.",
     "categoriaId": "mecanica",
     "dificultad": "basico",
     "estado": "active",

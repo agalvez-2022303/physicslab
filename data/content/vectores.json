@@ -1,6 +1,6 @@
 {
-  "slug": "representacion-vectores",
-  "titulo": "Representación y Conversión de Vectores",
+  "slug": "vectores",
+  "titulo": "Vectores",
   "teoria": "Un vector en el plano puede describirse en tres sistemas de coordenadas fundamentales:\n\n1. **Coordenadas Rectangulares (Cartesianas):** Especificado mediante sus proyecciones sobre los ejes ortogonales: $\\vec{A} = (A_x, A_y) = A_x\\hat{i} + A_y\\hat{j}$.\n\n2. **Coordenadas Polares:** Expresado por su magnitud (módulo) $r \\ge 0$ y su ángulo polar $\\theta \\in [0^\\circ, 360^\\circ)$, medido en sentido antihorario a partir del semieje positivo $+X$.\n   - Magnitud: $r = \\sqrt{A_x^2 + A_y^2}$\n   - Ángulo: $\\theta = \\arctan(|A_y| / |A_x|)$, ajustado según el cuadrante cartesiano.\n\n3. **Coordenadas Geográficas (Rumbo):** Utilizadas en navegación, topografía y cinemática vectorial. El vector se especifica con su magnitud $r$ y una dirección referida a los puntos cardinales (Norte, Sur, Este, Oeste).\n   - Se toma el eje Norte o Sur como referencia primaria, seguido del ángulo de desviación hacia el Este u Oeste (ejemplo: $N\\;30^\\circ\\;E$ o $S\\;45^\\circ\\;O$).\n   - Ejes exactos: Norte ($90^\\circ$), Sur ($270^\\circ$), Este ($0^\\circ$), Oeste ($180^\\circ$).",
   "formulas": [
     {
