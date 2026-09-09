@@ -140,7 +140,7 @@ export default function HomePage() {
             ) : (
               <div className={styles.empty}>
                 <span className={styles.emptyIcon}>◎</span>
-                <p>No se encontraron simulaciones para "{search}"</p>
+                <p>No se encontraron simulaciones para &quot;{search}&quot;</p>
               </div>
             )}
           </section>

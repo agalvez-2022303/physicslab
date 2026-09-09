@@ -32,6 +32,19 @@ export interface SimulationEntry {
 
 export const SIMULATIONS_REGISTRY: SimulationEntry[] = [
   {
+    id: 'sim-000',
+    slug: 'representacion-vectores',
+    titulo: 'Representación y Conversión de Vectores',
+    descripcionCorta: 'Coordenadas rectangulares, polares y geográficas con práctica interactiva.',
+    categoriaId: 'mecanica',
+    dificultad: 'basico',
+    estado: 'active',
+    orden: 1,
+    icono: '↗',
+    etiquetas: ['vectores', 'coordenadas', 'polar', 'rectangular', 'geográfico', 'práctica'],
+    path: '/sim/representacion-vectores',
+  },
+  {
     id: 'sim-001',
     slug: 'movimiento-aceleracion-constante',
     titulo: 'Movimiento con Aceleración Constante',

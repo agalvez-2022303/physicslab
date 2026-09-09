@@ -79,9 +79,9 @@ export function useAnimationLoop(callback: FrameCallback) {
       rafRef.current = requestAnimationFrame(resumeLoop)
     }
 
-    rafRef.current = requestAnimationFrame(loop)
+    rafRef.current = requestAnimationFrame(resumeLoop)
     runningRef.current = true
-  }, [loop])
+  }, [])
 
   const reset = useCallback(() => {
     stop()

@@ -1,0 +1,41 @@
+{
+  "slug": "representacion-vectores",
+  "titulo": "Representación y Conversión de Vectores",
+  "teoria": "Un vector en el plano puede describirse en tres sistemas de coordenadas fundamentales:\n\n1. **Coordenadas Rectangulares (Cartesianas):** Especificado mediante sus proyecciones sobre los ejes ortogonales: $\\vec{A} = (A_x, A_y) = A_x\\hat{i} + A_y\\hat{j}$.\n\n2. **Coordenadas Polares:** Expresado por su magnitud (módulo) $r \\ge 0$ y su ángulo polar $\\theta \\in [0^\\circ, 360^\\circ)$, medido en sentido antihorario a partir del semieje positivo $+X$.\n   - Magnitud: $r = \\sqrt{A_x^2 + A_y^2}$\n   - Ángulo: $\\theta = \\arctan(|A_y| / |A_x|)$, ajustado según el cuadrante cartesiano.\n\n3. **Coordenadas Geográficas (Rumbo):** Utilizadas en navegación, topografía y cinemática vectorial. El vector se especifica con su magnitud $r$ y una dirección referida a los puntos cardinales (Norte, Sur, Este, Oeste).\n   - Se toma el eje Norte o Sur como referencia primaria, seguido del ángulo de desviación hacia el Este u Oeste (ejemplo: $N\\;30^\\circ\\;E$ o $S\\;45^\\circ\\;O$).\n   - Ejes exactos: Norte ($90^\\circ$), Sur ($270^\\circ$), Este ($0^\\circ$), Oeste ($180^\\circ$).",
+  "formulas": [
+    {
+      "expresion": "r = \\sqrt{A_x^2 + A_y^2}",
+      "descripcion": "Módulo o magnitud del vector a partir de sus componentes rectangulares",
+      "variables": [
+        { "simbolo": "r", "descripcion": "Magnitud del vector", "unidad": "u" },
+        { "simbolo": "A_x", "descripcion": "Componente horizontal", "unidad": "u" },
+        { "simbolo": "A_y", "descripcion": "Componente vertical", "unidad": "u" }
+      ]
+    },
+    {
+      "expresion": "A_x = r \\cdot \\cos(\\theta), \\quad A_y = r \\cdot \\sin(\\theta)",
+      "descripcion": "Descomposición de coordenadas polares a rectangulares",
+      "variables": [
+        { "simbolo": "θ", "descripcion": "Ángulo polar respecto a +X", "unidad": "°" }
+      ]
+    },
+    {
+      "expresion": "\\text{Rumbo (Cuad. I)}: N\\;(90^\\circ - \\theta)\\;E",
+      "descripcion": "Conversión de ángulo polar en el primer cuadrante a rumbo geográfico",
+      "variables": [
+        { "simbolo": "θ", "descripcion": "Ángulo en el intervalo (0°, 90°)", "unidad": "°" }
+      ]
+    }
+  ],
+  "unidades": [
+    { "magnitud": "Magnitud Vectorial", "unidad": "Unidad arbitraria / Metro / Newton", "simbolo": "u / m / N" },
+    { "magnitud": "Ángulo Polar y Rumbo", "unidad": "Grado sexagesimal", "simbolo": "°" }
+  ],
+  "glosario": [
+    { "termino": "Vector", "definicion": "Magnitud física orientada caracterizada por módulo, dirección y sentido." },
+    { "termino": "Componentes Rectangulares", "definicion": "Proyecciones perpendiculares del vector sobre los ejes cartesianos X e Y." },
+    { "termino": "Ángulo Polar", "definicion": "Ángulo medido en sentido antihorario comenzando en el semieje positivo de las abscisas (+X)." },
+    { "termino": "Rumbo Geográfico", "definicion": "Dirección medida desde la línea Norte-Sur hacia el Este u Oeste (ángulo agudo entre 0° y 90°)." },
+    { "termino": "Azimut", "definicion": "Ángulo medido en sentido horario desde el Norte geográfico de 0° a 360°." }
+  ]
+}

@@ -13,6 +13,9 @@ const ThreeForcesEquilibrium = lazy(
 const ForceComposition = lazy(
   () => import('./simulations/force-composition/ForceComposition')
 )
+const VectorRepresentation = lazy(
+  () => import('./simulations/vector-representation/VectorRepresentation')
+)
 
 function SimulationLoader() {
   return (
@@ -64,6 +67,16 @@ export default function App() {
           <SimulationShell slug="composicion-fuerzas">
             <Suspense fallback={<SimulationLoader />}>
               <ForceComposition />
+            </Suspense>
+          </SimulationShell>
+        }
+      />
+      <Route
+        path="/sim/representacion-vectores"
+        element={
+          <SimulationShell slug="representacion-vectores">
+            <Suspense fallback={<SimulationLoader />}>
+              <VectorRepresentation />
             </Suspense>
           </SimulationShell>
         }

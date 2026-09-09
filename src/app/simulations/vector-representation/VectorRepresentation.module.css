@@ -1,0 +1,503 @@
+.sim {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.canvasWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 280px;
+  max-height: 440px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #080808;
+  border: 1px solid var(--glass-border);
+  cursor: crosshair;
+}
+
+.canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+.canvasOverlay {
+  position: absolute;
+  top: var(--sp-3);
+  left: var(--sp-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: var(--sp-2) var(--sp-3);
+  pointer-events: none;
+  font-family: var(--font-mono);
+}
+
+.overlayTitle {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray-500);
+}
+
+.overlayValue {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--white);
+}
+
+.overlaySub {
+  font-size: 11px;
+  color: var(--gray-400);
+}
+
+.canvasControls {
+  position: absolute;
+  bottom: var(--sp-3);
+  right: var(--sp-3);
+  display: flex;
+  gap: var(--sp-2);
+}
+
+.canvasBtn {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  color: var(--gray-300);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: var(--sp-1) var(--sp-2);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.canvasBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Modos de simulación y pestañas */
+.tabsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: var(--sp-2);
+}
+
+.tabBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--gray-400);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tabBtn:hover {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.tabActive {
+  background: var(--white) !important;
+  color: var(--black) !important;
+  border-color: var(--white) !important;
+  font-weight: 600;
+}
+
+.practiceBadge {
+  background: #ffffff;
+  color: #000000;
+  font-size: 9px;
+  padding: 1px 5px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+/* Layout de Paneles */
+.panelGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-4);
+}
+
+@media (min-width: 768px) {
+  .panelGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1100px) {
+  .panelGrid {
+    grid-template-columns: 1.2fr 1.8fr;
+  }
+}
+
+.card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardTitle {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.inputRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.labelRow {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--gray-300);
+}
+
+.sliderRow {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.slider {
+  flex: 1;
+  accent-color: var(--white);
+  cursor: pointer;
+}
+
+.numInput {
+  width: 80px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--glass-border);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  padding: var(--sp-1) var(--sp-2);
+  border-radius: var(--radius-sm);
+  text-align: right;
+}
+
+.numInput:focus {
+  outline: none;
+  border-color: var(--white);
+}
+
+.geoSelectRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--sp-2);
+  align-items: center;
+}
+
+.selectInput {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--glass-border);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  padding: var(--sp-2);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.selectInput:focus {
+  outline: none;
+  border-color: var(--white);
+}
+
+.presetsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  padding-top: var(--sp-2);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.presetBtn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  color: var(--gray-300);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.presetBtn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+}
+
+/* Tarjetas de salida de las 3 representaciones */
+.readoutsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-3);
+}
+
+@media (min-width: 600px) {
+  .readoutsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.readoutCard {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: var(--sp-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  transition: border-color 0.2s ease;
+}
+
+.readoutActive {
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.readoutHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--gray-500);
+}
+
+.readoutBadge {
+  font-size: 9px;
+  padding: 1px 4px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--gray-300);
+}
+
+.readoutMain {
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.01em;
+}
+
+.readoutDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--gray-400);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: var(--sp-1);
+}
+
+/* Desglose paso a paso */
+.toggleMathBtn {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: var(--gray-400);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  padding: 0;
+  transition: color 0.15s ease;
+}
+
+.toggleMathBtn:hover {
+  color: var(--white);
+}
+
+.mathPanel {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: var(--sp-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--gray-300);
+  animation: fadeIn 0.2s ease-out;
+}
+
+.mathStep {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-left: 2px solid rgba(255, 255, 255, 0.3);
+  padding-left: var(--sp-2);
+}
+
+.mathFormula {
+  color: var(--white);
+  font-weight: 500;
+}
+
+/* Modo Práctica */
+.practiceCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.scoreBanner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--sp-2) var(--sp-3);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--gray-300);
+}
+
+.challengePrompt {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  padding: var(--sp-3);
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--white);
+}
+
+.promptTitle {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--gray-400);
+  text-transform: uppercase;
+}
+
+.promptGiven {
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--white);
+}
+
+.practiceInputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3);
+}
+
+.actionBtn {
+  background: var(--white);
+  color: var(--black);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  border: 1px solid var(--white);
+  border-radius: var(--radius-md);
+  padding: var(--sp-2) var(--sp-4);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.actionBtn:hover {
+  background: #e5e5e5;
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: var(--sp-2) var(--sp-4);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.secondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.feedbackBox {
+  padding: var(--sp-3);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.feedbackSuccess {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: var(--white);
+}
+
+.feedbackError {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--gray-300);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
